@@ -1,0 +1,74 @@
+html {
+	margin: 0;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: 'Ampersand';
+	src: local('Georgia');
+	unicode-range: U+26;
+}
+
+body {
+	font-family: 'Ampersand', 'Open Sans';
+	background-color: rgba(255, 127, 80, 0.5);
+	margin: 0;
+	display: block;
+
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	nav {
+		margin: 0 auto;
+		padding: 1em 0;
+		max-width: 40em;
+
+		> h1 {
+			font-size: 1.2em;
+			grid-column: 1/6;
+		}
+
+		ul {
+			display: grid;
+			padding: 0;
+			margin: 0;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			justify-content: space-evenly;
+			text-align: center;
+
+			li {
+				list-style-type: none;
+				padding: 0;
+
+				&:focus-within > ul {
+					display: block;
+				}
+			}
+
+			ul {
+				display: none;
+			}
+		}
+	}
+
+	section {
+		padding: 1em 0;
+
+		h1 {
+			font-family: Ampersand, Helvetica, sans-serif;
+		}
+
+		> img {
+			width: 100%;
+		}
+	}
+	// img,
+	// svg {
+	// 	width: 20%;
+	// }
+}
+// nav ul li:focus-within > ul {
+// 	display: block;
+// }
