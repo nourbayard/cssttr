@@ -6,6 +6,8 @@
 
 * {
   transition: all 0.2s;
+  box-sizing: border-box;
+  margin: 0;
 
   :focus {
     background: yellow;
@@ -26,12 +28,6 @@
   }
 }
 
-html {
-  margin: 0;
-  box-sizing: border-box;
-  font-size: 100%;
-}
-
 body {
   padding: 1rem;
   font-family: 'Ampersand', 'Open Sans';
@@ -43,6 +39,7 @@ body {
   h2 {
     text-align: center;
     text-transform: uppercase;
+    margin: 1rem;
   }
 
   h2 {
@@ -93,13 +90,13 @@ body {
   form {
     display: grid;
     grid-template-columns: 1fr;
-
+    // grid-auto-rows: minmax(100px, auto);
     input {
       border-color: #000;
       padding: 0.20em 0.5em;
       font-size: 1em;
       z-index: 2;
-      height: 1.5rem;
+      height: 2rem;
     }
 
     input[type=email] {
@@ -147,39 +144,54 @@ body {
       background-color: yellow;
     }
 
-    a {
+    label:nth-of-type(3) {
       text-align: right;
     }
 
     button {
       width: 4rem;
+      height: 2rem;
       display: block;
-      right: 1%;
       margin: 1rem 0;
-
-      :focus {
-        border: 4px solid black;
-      }
+      font-size: 0.8rem;
+      font-family: 'Open Sans';
     }
   }
   /* * dit is voor de articles * */
   section {
     margin: 0 auto;
+    grid-row-gap: 1rem;
 
     h1 {
-      font-family: Ampersand, Helvetica, sans-serif;
+      font-family: 'Ampersand', 'Helvetica', sans-serif;
     }
 
     article {
-      background: white;
-    }
+      img {
+        width: 100%;
+      }
 
-    article p {
-      padding: 0 2rem 2rem;
-    }
+      p {
+        padding: 0 2rem 2rem;
+      }
 
-    article > img {
-      width: 100%;
+      figcaption {
+        font-style: italic;
+
+        p {
+          padding-top: 0.5em;
+        }
+      }
+
+      footer {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #444;
+
+        a {
+          color: inherit;
+        }
+      }
     }
   }
 }
@@ -204,27 +216,38 @@ body {
     padding: 0;
 
     > section:first-of-type {
+      margin: 0;
       // background-color: white;
+      position: fixed;
       height: 100%;
       padding: 2rem;
-
+      position: relative;
+      grid-column-start: 1;
+      //grid-template-rows: 1 / 3;
       nav {
         ul {
           grid-template-columns: 1fr;
         }
       }
     }
-
-    nav {
-      grid-column: 1/2;
-    }
+    // nav {
+    //   grid-column: 1/2;
+    // }
+    // section {
+    //   grid-column-start: 2;
+    // }
   }
 }
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 47em) {
   body {
-    background-color: blue;
-    color: grey;
-    display: grid;
+    // background-color: blue;
+    // color: grey;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 79em) {
+  body {
+    // background-color: purple;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
