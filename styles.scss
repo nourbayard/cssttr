@@ -655,3 +655,87 @@ label > svg {
   filter: none;
   outline: none;
 }
+
+main > section:last-of-type {
+  padding: 3em 2em;
+
+  section {
+    // background-color: white;
+    max-width: 27em;
+    border-radius: 1em;
+    margin: 0 auto;
+    border: 4px solid black;
+    box-shadow: 10px 10px 40px 0 rgba(0,0,0,0.73);
+
+    ol {
+      list-style-type: none;
+      padding: 2em;
+      border-bottom: 4px solid black;
+      margin: 0;
+
+      li {
+        padding: 0.5rem 1rem;
+        margin: 1rem 0;
+        border-radius: 0.5em;
+        border: none;
+        width: fit-content;
+      }
+
+      li:nth-of-type(odd) {
+        background-color: var(--blue);
+        text-align: right;
+        color: white;
+        margin: 0 0 0 auto;
+      }
+
+      li:nth-of-type(even) {
+        background-color: var(--grey);
+        color: black;
+      }
+
+      footer {
+        font-style: italic;
+        font-size: 0.7rem;
+      }
+    }
+
+    form {
+      padding: 2rem;
+
+      textarea {
+        width: 100%;
+        font-size: 1em;
+        padding: 1em;
+        // border-radius: 0.5em;
+        margin: 0 auto;
+        // max-width: 20em;
+        display: block;
+        border: none;
+        font-weight: normal;
+        border-top: 0.0625rem solid #eee;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 60em) {
+  label > svg {
+    width: 5vw;
+  }
+
+  section nav ol {
+    display: flex;
+    flex-direction: row;
+
+    li {
+      margin: 1em;
+    }
+  }
+
+  fieldset {
+    margin: 0 auto;
+  }
+}
