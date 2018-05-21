@@ -8,6 +8,11 @@
   --blue: #157ae3;
   --grey: #e5e5ea;
 }
+@font-face {
+  font-family: 'Ampersand';
+  src: local('Georgia');
+  unicode-range: U+26;
+}
 
 * {
   box-sizing: border-box;
@@ -63,6 +68,24 @@ header {
   nav {
     margin: 14em auto 7em;
   }
+}
+// Cursor on hyperlinks and general styling rules on and for hrefs
+a,
+a:hover {
+  cursor: url('http://www.snazzyspace.com/cursorsfolder/mickey-pointer.png'), auto !important;
+}
+
+a {
+  transition: all 0.5s ease;
+  color: black;
+}
+
+a:hover {
+  margin-left: 1em;
+}
+
+a:visited {
+  color: inherit;
 }
 
 h1 {
