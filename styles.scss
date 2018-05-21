@@ -527,3 +527,131 @@ figcaption {
 figure {
   margin: 0 0 3em;
 }
+
+main > section > nav {
+  // border: 1px solid black;
+  padding: 4em 0;
+  background: linear-gradient(89deg, #de0ab7, #f1c916);
+  background-size: 400% 400%;
+  animation: border 8s ease infinite;
+}
+@keyframes border {
+  0% {
+    background-position: 25% 0;
+  }
+
+  50% {
+    background-position: 76% 100%;
+  }
+
+  100% {
+    background-position: 25% 0;
+  }
+}
+
+progress {
+  margin: 2em 0 1em;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 45%;
+  height: 10px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(-45deg, rgba(0,0, 0, 0) 66%, transparent 66%), -webkit-linear-gradient(left, #09c, #f44);
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ol {
+  width: fit-content;
+  margin: 0 auto;
+  color: black;
+
+  li {
+    margin: 2em 0 0;
+    padding: 1em;
+    border: 2px solid white;
+  }
+
+  a {
+    text-decoration-color: white;
+  }
+}
+
+fieldset {
+  margin: -10.5em auto 0;
+  position: relative;
+  display: block;
+  border: none;
+  width: 100%;
+  text-align: center;
+  padding: 0 2em 3em;
+  background: linear-gradient(134deg, #fdae10, #900cfd);
+  background-size: 400% 400%;
+  animation: anotherOne 8s ease infinite;
+
+  input:focus {
+    box-shadow: none;
+  }
+}
+@keyframes anotherOne {
+  0% {
+    background-position: 45% 0;
+  }
+
+  50% {
+    background-position: 56% 100%;
+  }
+
+  100% {
+    background-position: 45% 0;
+  }
+}
+
+legend {
+  padding-top: 7em;
+  font-size: 2em;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+}
+
+label {
+  display: inline-block;
+  margin: 2em 0.4em 0;
+  text-align: center;
+}
+
+label > svg {
+  width: 8vw;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(80%);
+}
+
+[name="rating"] {
+  position: absolute;
+  left: -999px;
+}
+
+[name="rating"]:focus + label > svg,
+[name="rating"]:checked + label > svg,
+[name="rating"]:hover + label > svg {
+  filter: none;
+  outline: none;
+}
