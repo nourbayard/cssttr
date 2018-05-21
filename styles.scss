@@ -529,7 +529,6 @@ figure {
 }
 
 main > section > nav {
-  // border: 1px solid black;
   padding: 4em 0;
   background: linear-gradient(89deg, #de0ab7, #f1c916);
   background-size: 400% 400%;
@@ -660,7 +659,6 @@ main > section:last-of-type {
   padding: 3em 2em;
 
   section {
-    // background-color: white;
     max-width: 27em;
     border-radius: 1em;
     margin: 0 auto;
@@ -706,9 +704,7 @@ main > section:last-of-type {
         width: 100%;
         font-size: 1em;
         padding: 1em;
-        // border-radius: 0.5em;
         margin: 0 auto;
-        // max-width: 20em;
         display: block;
         border: none;
         font-weight: normal;
