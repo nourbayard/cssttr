@@ -405,3 +405,82 @@ article {
     color: white;
   }
 }
+/* This is for the spinner */
+article:last-of-type {
+  text-align: center;
+  color: white;
+  max-width: 100%;
+  padding: 3em 2em;
+  height: fit-content;
+  background: hsl(20, 40%, 90%);
+  background-image: linear-gradient(90deg, rgba(#f73,1) 11px, transparent 0), linear-gradient(90deg, rgba(#ff4a4f,1) 23px, transparent 0), linear-gradient(90deg, rgba(#ff9b4a,1) 23px, transparent 0), linear-gradient(90deg, rgba(#ff4a4f,1) 29px, transparent 0);
+  background-size: 52px 50%, 63px 50%, 43px 50%, 34px 50%;
+
+  h2 {
+    font-weight: 600;
+  }
+
+  section {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+
+  section div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: rgba(#fff,1);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+
+  section div:nth-child(1) {
+    left: 6px;
+    animation: section1 0.6s infinite;
+  }
+
+  section div:nth-child(2) {
+    left: 6px;
+    animation: section2 0.6s infinite;
+  }
+
+  section div:nth-child(3) {
+    left: 26px;
+    animation: section2 0.6s infinite;
+  }
+
+  section div:nth-child(4) {
+    left: 45px;
+    animation: section3 0.6s infinite;
+  }
+}
+@keyframes section1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes section3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes section2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(19px, 0);
+  }
+}
