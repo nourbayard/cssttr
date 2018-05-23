@@ -1,6 +1,5 @@
 :root {
   --pure: white;
-  --pulse: 1.5s ease infinite pulseGrow;
   --focusLeft: focusStateLeft 2s ease infinite;
   --focusRight: focusStateRight 2s ease infinite;
   --yellow: rgba(252,228,2, 1);
@@ -82,7 +81,11 @@ a {
 }
 
 a:hover {
-  margin-left: 1em;
+  // margin-left: 1em;
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  transform: rotate(180deg);
+  background: rgba(252,228,2, 0.4);
 }
 
 a:visited {
@@ -146,52 +149,53 @@ ul li+li:focus-within > ul {
 
 ul li+li:focus-within > ul > li {
   margin-top: 0.5rem;
+  border: 0;
 }
 
 ul ul {
   display: none;
 }
-@keyframes background {
-  0% {
-    background-position: 91% 0;
-  }
-
-  50% {
-    background-position: 10% 100%;
-  }
-
-  100% {
-    background-position: 91% 0;
-  }
-}
-@keyframes focusStateRight {
-  0% {
-    margin-left: 10px;
-  }
-
-  50% {
-    margin-left: 25px;
-    transform: rotate(90deg) scale(0.4, 0.4);
-  }
-
-  100% {
-    margin-left: 10px;
-  }
-}
-@keyframes focusStateLeft {
-  0% {
-    margin-right: 10px;
-  }
-
-  50% {
-    margin-right: 25px;
-    transform: rotate(90deg) scale(0.4, 0.4);
-  }
-
-  100% {
-    margin-right: 10px;
-  }
-}
+// @keyframes background {
+//   0% {
+//     background-position: 91% 0;
+//   }
+//
+//   50% {
+//     background-position: 10% 100%;
+//   }
+//
+//   100% {
+//     background-position: 91% 0;
+//   }
+// }
+// @keyframes focusStateRight {
+//   0% {
+//     margin-left: 10px;
+//   }
+//
+//   50% {
+//     margin-left: 25px;
+//     transform: rotate(90deg) scale(0.4, 0.4);
+//   }
+//
+//   100% {
+//     margin-left: 10px;
+//   }
+// }
+// @keyframes focusStateLeft {
+//   0% {
+//     margin-right: 10px;
+//   }
+//
+//   50% {
+//     margin-right: 25px;
+//     transform: rotate(90deg) scale(0.4, 0.4);
+//   }
+//
+//   100% {
+//     margin-right: 10px;
+//   }
+// }
 /* Aside / Login modal */
 aside {
   display: none;
@@ -213,6 +217,8 @@ aside {
       text-align: right;
       width: fit-content;
       margin: 0 0 0 auto;
+      border: 2px solid black;
+      padding: 0.5em 1em;
 
       a {
         text-decoration: none;
@@ -602,8 +608,7 @@ fieldset {
   padding: 0 2em 3em;
   background: linear-gradient(134deg, #fdae10, #900cfd);
   background-size: 400% 400%;
-  animation: anotherOne 8s ease infinite;
-
+  // animation: anotherOne 8s ease infinite;
   input:focus {
     box-shadow: none;
   }
@@ -653,6 +658,7 @@ label > svg {
 [name="rating"]:hover + label > svg {
   filter: none;
   outline: none;
+  transform: rotate(180deg) scale(2, 2);
 }
 
 main > section:last-of-type {

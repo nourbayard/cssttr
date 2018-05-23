@@ -1,6 +1,5 @@
 :root {
   --pure: white;
-  --pulse: 1.5s ease infinite pulseGrow;
   --focusLeft: focusStateLeft 2s ease infinite;
   --focusRight: focusStateRight 2s ease infinite;
   --yellow: #fce402;
@@ -62,7 +61,8 @@ header {
 }
 
 header h1 {
-  margin: 4em auto 2em
+  margin: 4em auto 2em;
+  color: white;
 }
 
 header nav {
@@ -79,7 +79,10 @@ a {
 }
 
 a:hover {
-  margin-left: 1em
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  transform: rotate(180deg);
+  background: rgba(252, 228, 2, 0.4)
 }
 
 a:visited {
@@ -142,49 +145,12 @@ ul li+li:focus-within>ul {
 }
 
 ul li+li:focus-within>ul>li {
-  margin-top: 0.5rem
+  margin-top: 0.5rem;
+  border: 0
 }
 
 ul ul {
   display: none
-}
-
-@keyframes background {
-  0% {
-    background-position: 91% 0
-  }
-  50% {
-    background-position: 10% 100%
-  }
-  100% {
-    background-position: 91% 0
-  }
-}
-
-@keyframes focusStateRight {
-  0% {
-    margin-left: 10px
-  }
-  50% {
-    margin-left: 25px;
-    transform: rotate(90deg) scale(0.4, 0.4)
-  }
-  100% {
-    margin-left: 10px
-  }
-}
-
-@keyframes focusStateLeft {
-  0% {
-    margin-right: 10px
-  }
-  50% {
-    margin-right: 25px;
-    transform: rotate(90deg) scale(0.4, 0.4)
-  }
-  100% {
-    margin-right: 10px
-  }
 }
 
 aside {
@@ -208,7 +174,9 @@ aside form span:nth-of-type(1) {
   display: block;
   text-align: right;
   width: fit-content;
-  margin: 0 0 0 auto
+  margin: 0 0 0 auto;
+  border: 2px solid black;
+  padding: 0.5em 1em
 }
 
 aside form span:nth-of-type(1) a {
@@ -586,8 +554,7 @@ fieldset {
   text-align: center;
   padding: 0 2em 3em;
   background: linear-gradient(134deg, #fdae10, #900cfd);
-  background-size: 400% 400%;
-  animation: anotherOne 8s ease infinite
+  background-size: 400% 400%
 }
 
 fieldset input:focus {
@@ -634,7 +601,8 @@ label>svg {
 
 [name="rating"]:focus+label>svg, [name="rating"]:checked+label>svg, [name="rating"]:hover+label>svg {
   filter: none;
-  outline: none
+  outline: none;
+  transform: rotate(180deg) scale(2, 2)
 }
 
 main>section:last-of-type {
