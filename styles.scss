@@ -78,6 +78,7 @@ a:hover {
 a {
   transition: all 0.5s ease;
   color: black;
+  text-decoration-color: white;
 }
 
 a:hover {
@@ -113,6 +114,10 @@ nav > h1 {
   font-size: 2em;
   margin: 0 auto;
   font-weight: 500;
+
+  a {
+    color: white;
+  }
 }
 
 ul {
@@ -155,47 +160,51 @@ ul li+li:focus-within > ul > li {
 ul ul {
   display: none;
 }
-// @keyframes background {
-//   0% {
-//     background-position: 91% 0;
-//   }
-//
-//   50% {
-//     background-position: 10% 100%;
-//   }
-//
-//   100% {
-//     background-position: 91% 0;
-//   }
-// }
-// @keyframes focusStateRight {
-//   0% {
-//     margin-left: 10px;
-//   }
-//
-//   50% {
-//     margin-left: 25px;
-//     transform: rotate(90deg) scale(0.4, 0.4);
-//   }
-//
-//   100% {
-//     margin-left: 10px;
-//   }
-// }
-// @keyframes focusStateLeft {
-//   0% {
-//     margin-right: 10px;
-//   }
-//
-//   50% {
-//     margin-right: 25px;
-//     transform: rotate(90deg) scale(0.4, 0.4);
-//   }
-//
-//   100% {
-//     margin-right: 10px;
-//   }
-// }
+@keyframes background {
+  0% {
+    background-position: 91% 0;
+  }
+
+  50% {
+    background-position: 10% 100%;
+  }
+
+  100% {
+    background-position: 91% 0;
+  }
+}
+@keyframes focusStateRight {
+  0% {
+    margin-left: 10px;
+  }
+
+  50% {
+    margin-left: 25px;
+    transform: rotate(90deg) scale(0.4, 0.4);
+  }
+
+  100% {
+    margin-left: 10px;
+  }
+}
+@keyframes focusStateLeft {
+  0% {
+    margin-right: 10px;
+  }
+
+  50% {
+    margin-right: 25px;
+    transform: rotate(90deg) scale(0.4, 0.4);
+  }
+
+  100% {
+    margin-right: 10px;
+  }
+}
+
+main > article {
+  margin-top: 2em;
+}
 /* Aside / Login modal */
 aside {
   display: none;
@@ -608,7 +617,8 @@ fieldset {
   padding: 0 2em 3em;
   background: linear-gradient(134deg, #fdae10, #900cfd);
   background-size: 400% 400%;
-  // animation: anotherOne 8s ease infinite;
+  animation: anotherOne 8s ease infinite;
+
   input:focus {
     box-shadow: none;
   }
@@ -739,5 +749,9 @@ main > section:last-of-type {
 
   fieldset {
     margin: 0 auto;
+  }
+
+  main > article {
+    margin-top: 0;
   }
 }
